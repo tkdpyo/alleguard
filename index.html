@@ -3,19 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Copilot Studio WebApp</title>
+    <title>알레가드 for School</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Pretendard:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="introScreen" class="intro-screen" aria-label="인트로 화면">
+      <header class="intro-topbar">
+        <p>MAI Hero 6기 OJT 발표</p>
+        <span class="intro-logo" aria-hidden="true">
+          <i class="logo-cell logo-red"></i>
+          <i class="logo-cell logo-green"></i>
+          <i class="logo-cell logo-cyan"></i>
+          <i class="logo-cell logo-yellow"></i>
+        </span>
+      </header>
+
+      <main class="intro-main">
+        <div class="title-cloud" role="img" aria-label="알레가드 for School 타이틀">
+          <span>알레가드 for School</span>
+        </div>
+
+        <button id="enterBtn" type="button" class="enter-btn">들어가기</button>
+      </main>
+
+      <footer class="intro-footer">서울행당초등학교 상표쌤</footer>
+    </div>
+
     <div class="bg-glow bg-glow-left"></div>
     <div class="bg-glow bg-glow-right"></div>
-    <div class="app-shell">
+    <div id="chatScreen" class="app-shell hidden" aria-hidden="true">
       <header class="app-header">
         <div class="header-copy">
           <p class="eyebrow">With Copilot Studio</p>
