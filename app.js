@@ -14,8 +14,15 @@ const openChat = () => {
   }, 450);
 };
 
-enterBtn.addEventListener('click', openChat);
+const reloadIframe = () => {
+  try {
+    const url = new URL(iframe.src);
+    url.searchParams.set('__refresh__', String(Date.now()));
+    iframe.src = url.toString();
+  } catch {
+    iframe.src = `${iframe.src}${iframe.src.includes('?') ? '&' : '?'}__refresh__=${Date.now()}`;
+  }
+};
 
-reloadBtn.addEventListener('click', () => {
-  iframe.src = iframe.src;
-});
+enterBtn.addEventListener('click', openChat);
+reloadBtn.addEventListener('click', reloadIframe);
